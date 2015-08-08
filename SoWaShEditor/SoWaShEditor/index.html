@@ -3,13 +3,65 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>TypeScript HTML App</title>
+    <title>SoWaSh Level Editor</title>
     <link rel="stylesheet" href="app.css" type="text/css" />
+
     <script src="app.js"></script>
 </head>
 <body>
-    <h1>TypeScript HTML App</h1>
+    <div id="content">
+        <h1>SoWaSh Level Editor</h1>
+        <div>
+            <p>
+                Stelle Größe ein, klicke auf ein Kästchen und wähle das entsprechen Sprite aus. <br />
+                Bei Sprites mit Rotation, kannst du diese mit dem grünen Pfeil auf dem Spritebild ändern.<br />
+                Weiter unten kannst du das Level als fertige Textdatei betrachten.<br />
+                Das Level kannst du dann auf "Download Level" speichern. (Außer im IE/Edge :( )<br />
+                Schon erstellte Level können auch hochgeladen werden.
+            </p>
+            <p><b>Wichtig: Ball und Ziel sind 2x2 Felder groß.</b> Hier wird lediglich die Mittelposition angezeigt.</p>
+            <p><b>Auch Wichtig: Mauern am Rand werden automatisch hinzugefügt!!</b></p>
+        </div>
+        <div id="input-section">
+            <div class="input-container">
+                <div>Columns:</div>
+                <input id="column-count" type="number" />
+            </div>
+            <div class="input-container">
+                <div>Rows:</div>
+                <input id="row-count" type="number" />
+            </div>
+            <div class="input-container">
+                <div>Upload:</div>
+                <input type="file" id="file" />
+                <button id="upload">Upload Level</button>
+            </div>
+            <div class="input-container">
+                <div>Download:</div>
+                <input type="text" id="filename" placeholder="Filename"/>
+                <button id="download">Download Level</button>
+            </div>
+        </div>
+        <div id="design-section"></div>
+        
+        <div id="output-section"></div>
 
-    <div id="content"></div>
+        <!-- Templates -->
+        <div id="dropdown-item-template" class="template">
+            <div class="dropdown-item">
+                <div class="dropdown-item-image-container">
+                    <img class="dropdown-item-image" />
+                </div>
+                <div class="rotation-button"></div>
+            </div>
+        </div>
+
+        <div id="dropdown-template" class="template">
+            <div class="dropdown">
+                <div class="current-item"></div>
+                <div class="item-list"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

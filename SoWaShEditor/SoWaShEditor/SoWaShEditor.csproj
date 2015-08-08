@@ -23,6 +23,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.css" />
+    <Content Include="images\ball.png" />
+    <Content Include="images\empty.png" />
+    <Content Include="images\line_border.png" />
+    <Content Include="images\line_middle.png" />
+    <Content Include="images\slope.png" />
+    <Content Include="images\slope_half.png" />
+    <Content Include="images\slope_half_big.png" />
+    <Content Include="images\slope_half_big_l.png" />
+    <Content Include="images\slope_half_l.png" />
+    <Content Include="images\turn_tile.png" />
+    <Content Include="images\wall.png" />
+    <Content Include="images\ziel.png" />
     <Content Include="index.html" />
     <Content Include="web.config" />
   </ItemGroup>
@@ -64,8 +76,18 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptRemoveComments>True</TypeScriptRemoveComments>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptModuleKind>None</TypeScriptModuleKind>
+    <TypeScriptOutFile>app.js</TypeScriptOutFile>
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>False</TypeScriptNoEmitOnError>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Release'">
     <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
