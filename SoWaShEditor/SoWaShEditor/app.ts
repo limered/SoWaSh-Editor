@@ -261,7 +261,7 @@ class DropdownItem {
         var imageElement = <HTMLImageElement>this.element.querySelector('img');
         if (this.rotation >= this.sprite.rotationIds.length)
             this.rotation = 0;
-        imageElement.style.transform = "rotate(" + 90 * this.sprite.rotationIds[this.rotation] + "deg)";
+        imageElement.style.transform = "rotate(" + -90 * this.sprite.rotationIds[this.rotation] + "deg)";
     }
 
     OnClickRotate(event: Event) {
